@@ -1,5 +1,5 @@
 import './App.css'
-import { useEffect, useLayoutEffect, useState } from 'react'
+import { useEffect, useState, useLayoutEffect } from 'react'
 import Hero from './components/HeroSection/hero'
 import Footer from './components/FooterSection/footer'
 import Contact from './components/ContactSection/contact'
@@ -7,39 +7,67 @@ import Service from './components/ServiceSection/service'
 import Header from './components/HeaderSection/header'
 
 export default function App() {
-	// Pobieranie motywu z localStorage lub ustawień systemowych
+	// Funkcja pomocnicza do ustawienia motywu z localStorage lub ustawień systemowych
 	const getInitialTheme = () => {
 		const storedTheme = localStorage.getItem("theme");
-		if (storedTheme) return storedTheme === "dark";
+		if (storedTheme) return storedTheme === "dark"; // Jeśli jest zapisany motyw, zwróć go
+		// Jeśli brak motywu w localStorage, sprawdź preferencje systemowe
 		return window.matchMedia("(prefers-color-scheme: dark)").matches;
 	};
 
+	// Używamy useState z funkcją getInitialTheme
 	const [isDark, setIsDark] = useState<boolean>(getInitialTheme);
 
-	// Ustawianie klasy 'dark' na <html> oraz zapisywanie do localStorage
+	// Zastosowanie motywu na stronie w useLayoutEffect
 	useLayoutEffect(() => {
 		if (isDark) {
 			document.documentElement.classList.add("dark");
-			localStorage.setItem("theme", "dark");
 		} else {
 			document.documentElement.classList.remove("dark");
-			localStorage.setItem("theme", "light");
 		}
 	}, [isDark]);
 
-	// Obsługa zmian w systemowym trybie ciemnym
+	// Obsługa zmiany ustawień systemowych
 	useEffect(() => {
 		const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
 		const handleChange = (event: MediaQueryListEvent) => {
+			// Tylko jeśli brak motywu w localStorage, ustaw preferencje systemowe
 			if (!localStorage.getItem("theme")) {
 				setIsDark(event.matches);
 			}
 		};
 
+		// Dodanie event listenera
 		mediaQuery.addEventListener("change", handleChange);
+
 		return () => mediaQuery.removeEventListener("change", handleChange);
 	}, []);
+
+	// Funkcja do ręcznej zmiany motywu z przycisku
+	const toggleTheme = () => {
+		const newTheme = !isDark;
+		setIsDark(newTheme);
+		localStorage.setItem("theme", newTheme ? "dark" : "light");
+
+		// Ustawienie motywu natychmiast po zmianie
+		if (newTheme) {
+			document.documentElement.classList.add("dark");
+		} else {
+			document.documentElement.classList.remove("dark");
+		}
+	};
+
+	// Sprawdzanie początkowego motywu tylko po pierwszym renderze
+	useEffect(() => {
+		// Dodanie klasy "dark" po pierwszym załadowaniu
+		const storedTheme = localStorage.getItem("theme");
+		if (storedTheme === "dark") {
+			document.documentElement.classList.add("dark");
+		} else {
+			document.documentElement.classList.remove("dark");
+		}
+	}, []); // Zostanie wykonane tylko raz
 
 	return (
 		<>
@@ -56,7 +84,7 @@ export default function App() {
 			</div>
 
 			{/* Nagłówek */}
-			<Header isDark={isDark} setIsDark={setIsDark} />
+			<Header isDark={isDark} toggleTheme={toggleTheme} />
 
 			{/* Główna treść */}
 			<main>
