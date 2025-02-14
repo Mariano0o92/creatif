@@ -32,6 +32,7 @@ export default function App() {
 		const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
 		const handleChange = (event: MediaQueryListEvent) => {
+			// Jeśli użytkownik nie ustawił jeszcze motywu, wtedy zaktualizuj stan na podstawie preferencji systemowych
 			if (!localStorage.getItem("theme")) {
 				setIsDark(event.matches);
 			}
@@ -40,6 +41,11 @@ export default function App() {
 		mediaQuery.addEventListener("change", handleChange);
 		return () => mediaQuery.removeEventListener("change", handleChange);
 	}, []);
+
+	// Funkcja do przełączania motywu
+	const toggleTheme = () => {
+		setIsDark((prev) => !prev); // Przełączanie stanu motywu
+	};
 
 	return (
 		<>
@@ -56,7 +62,7 @@ export default function App() {
 			</div>
 
 			{/* Nagłówek */}
-			<Header isDark={isDark} setIsDark={setIsDark} />
+			<Header isDark={isDark} toggleTheme={toggleTheme} /> {/* Przekazujemy funkcję toggleTheme */}
 
 			{/* Główna treść */}
 			<main>
