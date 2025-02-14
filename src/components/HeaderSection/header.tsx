@@ -15,10 +15,10 @@ const navigation = [
 
 interface HeaderProps {
 	isDark: boolean
-	toggleTheme: () => void;
+	setIsDark: (value: boolean) => void
 }
 
-export default function Header({ isDark, toggleTheme }: HeaderProps) {
+export default function Header({ isDark, setIsDark }: HeaderProps) {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 	const [isScrolled, setIsScrolled] = useState(false)
 
@@ -66,7 +66,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
 						</a>
 					))}
 				</div>
-				<button className='hidden lg:flex ml-5 p-3 cursor-pointer' onClick={toggleTheme}>
+				<button className='hidden lg:flex ml-5 p-3 cursor-pointer' onClick={() => setIsDark(!isDark)}>
 					{isDark ? <img className='h-8' src={Sun} alt='Sun' /> : <img className='h-8' src={Moon} alt='Moon' />}
 				</button>
 				<div className='hidden lg:flex lg:flex-1 lg:justify-end'>
@@ -81,7 +81,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
 				<div className='fixed inset-0 z-50' />
 				<DialogPanel className='fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
 					<div className='flex items-center justify-between'>
-						<button className='flex lg:hidden ml-5 p-3 cursor-pointer' onClick={toggleTheme}>
+						<button className='flex lg:hidden ml-5 p-3 cursor-pointer' onClick={() => setIsDark(!isDark)}>
 							{isDark ? <img className='h-8' src={Sun} alt='Sun' /> : <img className='h-8' src={Moon} alt='Moon' />}
 						</button>
 						<button

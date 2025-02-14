@@ -1,5 +1,5 @@
 import './App.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import Hero from './components/HeroSection/hero'
 import Footer from './components/FooterSection/footer'
 import Contact from './components/ContactSection/contact'
@@ -17,7 +17,7 @@ export default function App() {
 	const [isDark, setIsDark] = useState<boolean>(getInitialTheme);
 
 	// Ustawianie klasy 'dark' na <html> oraz zapisywanie do localStorage
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (isDark) {
 			document.documentElement.classList.add("dark");
 			localStorage.setItem("theme", "dark");
@@ -32,7 +32,6 @@ export default function App() {
 		const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
 		const handleChange = (event: MediaQueryListEvent) => {
-			// Jeśli użytkownik nie ustawił jeszcze motywu, wtedy zaktualizuj stan na podstawie preferencji systemowych
 			if (!localStorage.getItem("theme")) {
 				setIsDark(event.matches);
 			}
@@ -41,11 +40,6 @@ export default function App() {
 		mediaQuery.addEventListener("change", handleChange);
 		return () => mediaQuery.removeEventListener("change", handleChange);
 	}, []);
-
-	// Funkcja do przełączania motywu
-	const toggleTheme = () => {
-		setIsDark((prev) => !prev); // Przełączanie stanu motywu
-	};
 
 	return (
 		<>
@@ -62,7 +56,7 @@ export default function App() {
 			</div>
 
 			{/* Nagłówek */}
-			<Header isDark={isDark} toggleTheme={toggleTheme} /> {/* Przekazujemy funkcję toggleTheme */}
+			<Header isDark={isDark} setIsDark={setIsDark} />
 
 			{/* Główna treść */}
 			<main>
