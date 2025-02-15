@@ -236,7 +236,7 @@ export default function footer() {
     </div>
 
     <p className="text-xs">
-      &copy; 2022. Company Name. All rights reserved.
+      &copy; 2022. Creatif Studio. Wszystkie prawa zastrzeżone.
     </p>
   </div>
 </footer>
