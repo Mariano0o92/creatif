@@ -1,4 +1,8 @@
+import { useForm, ValidationError } from '@formspree/react'
+
 export default function Contact() {
+	const [state, handleSubmit] = useForm('mqaeyvjy')
+
 	return (
 		<section className='text-gray-600' id='kontakt'>
 			<div className='mx-auto p-4 my-6 space-y-2 text-center'>
@@ -7,6 +11,7 @@ export default function Contact() {
 					Masz pytania? Zadzwoń lub napisz. Chętnie udzielimy odpowiedzi i omówimy szczegóły.
 				</p>
 			</div>
+
 			<div className='flex flex-col w-full gap-4'>
 				<div className='mx-auto grid justify-center grid-cols-1 w-full max-w-3xl gap-4 sm:grid-cols-2'>
 					<p className='flex flex-col items-center justify-items-center flex-1 gap-2 py-10 px-4 bg-green-100 rounded-3xl shadow-md hover:-translate-y-1 transform transition-all duration-300 ease-in-out hover:shadow-lg'>
@@ -25,36 +30,53 @@ export default function Contact() {
 						<span className='font-bold'>creatif@business.com</span>
 					</p>
 				</div>
+
 				<div className='flex justify-center gap-4'>
-					<form className='space-y-6 w-full max-w-3xl'>
+					<form className='space-y-6 w-full max-w-3xl' onSubmit={handleSubmit}>
 						<label className='block'>
-							<span className='font-semibold text-[#3eb43e]'>Full name</span>
+							<span className='font-semibold text-[#3eb43e]'>Imię i nazwisko</span>
 							<input
 								type='text'
+								name='name'
+								required
 								placeholder='Imię i nazwisko'
 								className='block w-full mt-1 py-3 px-4 bg-green-100 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#62dfbb] shadow-md'
 							/>
+							<ValidationError field='name' errors={state.errors} />
 						</label>
+
 						<label className='block'>
-							<span className='font-semibold text-[#3eb43e]'>Email address</span>
+							<span className='font-semibold text-[#3eb43e]'>Adres e-mail</span>
 							<input
 								type='email'
+								name='email'
+								required
 								placeholder='email'
 								className='block w-full mt-1 py-3 px-4 bg-green-100 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#62dfbb] shadow-md'
 							/>
+							<ValidationError field='email' errors={state.errors} />
 						</label>
+
 						<label className='block'>
-							<span className='font-semibold text-[#3eb43e]'>Message</span>
+							<span className='font-semibold text-[#3eb43e]'>Wiadomość</span>
 							<textarea
 								rows={3}
+								name='message'
+								required
 								placeholder='wiadomość'
 								className='block w-full mt-1 min-h-40 py-3 px-4 bg-green-100 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#62dfbb] shadow-md'></textarea>
+							<ValidationError field='message' errors={state.errors} />
 						</label>
+
 						<button
-							type='button'
-							className='self-center rounded-md bg-[#3eb43e] px-10 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-[#62dfbb] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#62dfbb] cursor-pointer transition-all duration-300 ease-in-out shadow-md'>
-							Submit
+							type='submit'
+							disabled={state.submitting}
+							className='self-center rounded-md bg-[#3eb43e] px-10 py-2.5 text-sm font-semibold text-white hover:bg-[#62dfbb] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#62dfbb] cursor-pointer transition-all duration-300 ease-in-out shadow-md'>
+							{state.submitting ? 'Wysyłanie...' : 'Wyślij'}
 						</button>
+						{state.succeeded && (
+							<p className='text-green-600 text-center font-semibold'>Dziękujemy! Wiadomość została wysłana.</p>
+						)}
 					</form>
 				</div>
 			</div>
