@@ -13,7 +13,7 @@ export default function Service() {
 		AOS.init({ duration: 1000, once: false })
 	}, [])
 	return (
-		<section id='uslugi' className='text-gray-600 '>
+		<section id='uslugi' className='section text-gray-600 '>
 			<div className='mx-auto p-4 my-6 space-y-2 text-center'>
 				<h2 className='text-4xl font-bold text-[#3eb43e] sm:text-6xl'>Czym się zajmujemy?</h2>
 				<p className='dark:text-stone-100'>Libero minima optio qui</p>

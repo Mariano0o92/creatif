@@ -1,10 +1,17 @@
+import { useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react'
+import { Toaster, toast } from 'sonner'
 
 export default function Contact() {
 	const [state, handleSubmit] = useForm('mqaeyvjy')
+	useEffect(() => {
+		if (state.succeeded) {
+		  toast.success('Dziękujemy! Wiadomość została wysłana.');
+		}
+	  }, [state.succeeded]); // Teraz powiadomienie pojawi się tylko raz
 
 	return (
-		<section className='text-gray-600' id='kontakt'>
+		<section className='section text-gray-600' id='kontakt'>
 			<div className='mx-auto p-4 my-6 space-y-2 text-center'>
 				<h2 className='text-4xl font-bold text-[#3eb43e] sm:text-6xl'>Skontaktuj się z nami</h2>
 				<p className='dark:text-stone-100 font-semibold'>
@@ -33,6 +40,7 @@ export default function Contact() {
 
 				<div className='flex justify-center gap-4'>
 					<form className='space-y-6 w-full max-w-3xl' onSubmit={handleSubmit}>
+						<Toaster position="bottom-right" richColors />
 						<label className='block'>
 							<span className='font-semibold text-[#3eb43e]'>Imię i nazwisko</span>
 							<input
@@ -74,9 +82,6 @@ export default function Contact() {
 							className='self-center rounded-md bg-[#3eb43e] px-10 py-2.5 text-sm font-semibold text-white hover:bg-[#62dfbb] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#62dfbb] cursor-pointer transition-all duration-300 ease-in-out shadow-md'>
 							{state.submitting ? 'Wysyłanie...' : 'Wyślij'}
 						</button>
-						{state.succeeded && (
-							<p className='text-green-600 text-center font-semibold'>Dziękujemy! Wiadomość została wysłana.</p>
-						)}
 					</form>
 				</div>
 			</div>

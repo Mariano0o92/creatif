@@ -43,7 +43,7 @@ export default function Hero() {
 	}
 
 	return (
-		<section className='relative text-gray-600 dark:text-stone-100 h-screen'>
+		<section className='section relative text-gray-600 dark:text-stone-100 h-screen'>
 			<div className='px-6 lg:px-8'>
 				<div className='max-w-2xl py-32 sm:py-48 lg:py-56'>
 					<div className='hidden sm:mb-8 sm:flex sm:justify-center'>
