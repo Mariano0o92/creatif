@@ -83,7 +83,7 @@ export default function Hero() {
 				</div>
 				<button
 					onClick={handleButtonClick}
-					className={`hidden fixed bottom-5 right-20 z-50 hover:scale-125 transition-all ease-in-out duration-300 cursor-pointer h-12 w-12 ${
+					className={`hidden fixed bottom-18 right-20 z-50 hover:scale-125 transition-all ease-in-out duration-300 cursor-pointer h-12 w-12 ${
 						isLastSection ? 'rotate-x-180' : ''
 					} lg:flex`}>
 					<img src={DownArrow} alt='down arrow' />
