@@ -31,7 +31,7 @@ const Footer = () => {
           </a>
         </p>
       </div>
-      <div className="flex gap-3 text-[#3eb43e] font-bold">
+      <div className="flex items-center gap-3 text-[#3eb43e] font-bold">
         <a href="#" className="hover:text-gray-600 dark:hover:text-stone-100 transition-all ease-in-out duration-300">
           Obszary działania
         </a>
