@@ -1,32 +1,33 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
-  text-align: center;
-  scroll-behavior: smooth;
+	text-align: center;
+	scroll-behavior: smooth;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
-
 
 body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
+	font-family: 'DM Sans', serif;
+	font-optical-sizing: auto;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
 }
 
-
-
 .section {
-  display: flex;
-  padding: 1.5rem;
-  max-width: 1280px;
-  margin: 0 auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 80dvh;
-  scroll-margin: 60px;
+	display: flex;
+	padding: 1.5rem;
+	max-width: 1280px;
+	margin: 0 auto;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 80dvh;
+	scroll-margin-top: 60px;
 }
