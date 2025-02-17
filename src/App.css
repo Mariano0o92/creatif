@@ -2,19 +2,30 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
   scroll-behavior: smooth;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+html, body {
+  height: 100vh;
+  width: 100%;
+}
+
+
 
 .section {
   display: flex;
+  padding: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 80dvh;
   scroll-margin: 60px;
 }

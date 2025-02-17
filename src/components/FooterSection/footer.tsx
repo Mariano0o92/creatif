@@ -3,8 +3,8 @@ import CreatifLogo from '../../assets/creatifLogo.png'
 
 export default function footer() {
   return (
-    <footer className='mt-10'>
-  <div className="mx-auto max-w-screen-xl space-y-8 px-4 sm:px-6 lg:space-y-16 lg:px-8  text-gray-600 dark:text-stone-100">
+    <footer className='mt-10 mx-auto max-w-screen-xl'>
+  <div className="space-y-8 px-6 lg:space-y-16  text-gray-600 dark:text-stone-100">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div className="grid grid-cols-1 justify-items-center">
         <div className="text-teal-600 dark:text-teal-300">
