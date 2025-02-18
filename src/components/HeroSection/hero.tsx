@@ -31,7 +31,7 @@ export default function Hero() {
 		if (isLastSection) {
 			window.scrollTo({ top: 0, behavior: 'smooth' })
 		} else {
-			const sections = document.querySelectorAll('section')
+			const sections = document.querySelectorAll('.section')
 			// eslint-disable-next-line prefer-const
 			for (let section of sections) {
 				if (section.getBoundingClientRect().top > 50) {

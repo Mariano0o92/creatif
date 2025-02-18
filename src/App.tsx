@@ -5,6 +5,7 @@ import Footer from './components/FooterSection/footer'
 import Contact from './components/ContactSection/contact'
 import Service from './components/ServiceSection/service'
 import Header from './components/HeaderSection/header'
+import Tech from './components/TechSection/tech'
 
 export default function App() {
 	// Pobieranie motywu z localStorage lub ustawień systemowych
@@ -64,7 +65,8 @@ export default function App() {
 				<Service />
 				<Contact />
 			</main>
-
+			{/* Animacja */}
+			<Tech />
 			{/* Stopka */}
 			<Footer />
 		</>
