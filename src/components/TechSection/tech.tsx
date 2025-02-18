@@ -23,15 +23,15 @@ const logos = [
 export default function Tech() {
 	return (
 		<>
-			<div className='w-full max-w-7xl py-8  inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]'>
-				<ul className='flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll'>
+			<div className='w-full max-w-7xl py-8 px-6 overflow-hidden inline-flex flex-nowrap [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]'>
+				<ul className='flex items-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll'>
 					{[...logos].map((logo, index) => (
 						<li>
 							<img key={index} src={logo.src} className='w-15 h-15' alt='logo' />
 						</li>
 					))}
 				</ul>
-				<ul className='flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll'>
+				<ul className='flex items-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll'>
 					{[...logos].map((logo, index) => (
 						<li>
 							<img key={index} src={logo.src} className='w-15 h-15' alt='logo' />
