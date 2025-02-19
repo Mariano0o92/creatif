@@ -16,6 +16,7 @@
 html {
 	text-align: center;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 *,
@@ -41,5 +42,4 @@ body {
 	align-items: center;
 	justify-content: center;
 	scroll-margin-top: 80px;
-	overflow: hidden;
 }

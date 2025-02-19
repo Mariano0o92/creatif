@@ -1,13 +1,8 @@
-import { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 import Development from '../../assets/development.jpg'
 import Passion from '../../assets/passion.jpg'
 
 export default function About() {
-        useEffect(() => {
-            AOS.init({ duration: 1000, once: true })
-        }, [])
+
 	return (
 		<section id='onas' className='section relative text-gray-600 dark:text-stone-100'>
 			{/* Header Section */}
@@ -19,7 +14,7 @@ export default function About() {
 				{/* First Content Block */}
 				<div
 					data-aos='fade-right'
-					data-aos-offset='300'
+					data-aos-offset='100'
 					data-aos-easing='ease-in-sine'
                     data-aos-once='true'
 					className='grid justify-center grid-cols-1 md:grid-cols-2 bg-green-100 rounded-3xl shadow-md overflow-hidden'>
@@ -33,7 +28,7 @@ export default function About() {
 				{/* Second Content Block */}
 				<div
 					data-aos='fade-left'
-					data-aos-offset='300'
+					data-aos-offset='100'
 					data-aos-easing='ease-in-sine'
                     data-aos-once='true'
 					className='grid justify-center grid-cols-1 md:grid-cols-2 bg-green-100 rounded-3xl shadow-md overflow-hidden'>
