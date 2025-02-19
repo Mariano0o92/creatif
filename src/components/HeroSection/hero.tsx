@@ -34,7 +34,7 @@ export default function Hero() {
 			const sections = document.querySelectorAll('.section')
 			// eslint-disable-next-line prefer-const
 			for (let section of sections) {
-				if (section.getBoundingClientRect().top > 50) {
+				if (section.getBoundingClientRect().top > 80) {
 					section.scrollIntoView({ behavior: 'smooth' })
 					break
 				}
@@ -63,11 +63,11 @@ export default function Hero() {
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: 0 }}
 								transition={{ duration: 0.5 }}
-								className='text-5xl font-bold text-[#3eb43e] tracking-tight text-balance sm:text-7xl'>
+								className='text-4xl font-bold text-[#3eb43e] tracking-tight text-balance sm:text-7xl'>
 								{words[index]}
 							</motion.h1>
 						</AnimatePresence>
-						<p className='mt-8 text-lg font-medium text-pretty sm:text-xl/8'>
+						<p className='mt-8 text-md font-medium text-pretty sm:text-xl/8'>
 							Tworzymy nowoczesne strony internetowe, a także zajmujemy się pozycjonowaniem, aby skutecznie przyciągać
 							klientów do Twojego biznesu. Gwarantujemy wysoką jakość, szybkie wykonanie, nowoczesny design oraz pełne
 							wsparcie.

@@ -9,7 +9,7 @@ const navigation = [
 	{ name: 'Home', href: '#' },
 	{ name: 'Usługi', href: '#uslugi' },
 	{ name: 'Portfolio', href: '#' },
-	{ name: 'O nas', href: '#' },
+	{ name: 'O nas', href: '#onas' },
 	{ name: 'Kontakt', href: '#kontakt' },
 ]
 
@@ -41,7 +41,7 @@ export default function Header({ isDark, setIsDark }: HeaderProps) {
 			}`}>
 			<nav
 				aria-label='Global'
-				className='flex items-center justify-between p-5 lg:px-8 transition-all duration-500 ease-in-out max-w-screen-xl mx-auto'>
+				className='flex items-center justify-between p-5 lg:px-6 transition-all duration-500 ease-in-out max-w-screen-xl mx-auto'>
 				<div className='flex lg:flex-1'>
 					<a href='#' className='-m-1.5 p-1.5'>
 						<img alt='Company Logo' src={CreatifLogo} className='h-12 w-auto lg:h-auto' />

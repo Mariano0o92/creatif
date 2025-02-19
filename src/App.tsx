@@ -6,6 +6,7 @@ import Contact from './components/ContactSection/contact'
 import Service from './components/ServiceSection/service'
 import Header from './components/HeaderSection/header'
 import Tech from './components/TechSection/tech'
+import About from './components/AboutSection/about'
 
 export default function App() {
 	// Pobieranie motywu z localStorage lub ustawień systemowych
@@ -60,9 +61,10 @@ export default function App() {
 			<Header isDark={isDark} setIsDark={setIsDark} />
 
 			{/* Główna treść */}
-			<main>
+			<main className='mt-20'>
 				<Hero />
 				<Service />
+				<About />
 				<Contact />
 			</main>
 			{/* Animacja */}

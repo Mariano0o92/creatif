@@ -40,5 +40,6 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	scroll-margin-top: 40px;
+	scroll-margin-top: 80px;
+	overflow: hidden;
 }
