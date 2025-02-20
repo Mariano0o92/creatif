@@ -18,7 +18,7 @@ export default function Contact() {
     <section className="section text-gray-600" id="kontakt">
       <div className="mx-auto p-4 my-6 space-y-2 text-center">
         <h2 className="text-4xl font-bold text-[#3eb43e] sm:text-6xl">Skontaktuj się z nami</h2>
-        <p className="dark:text-stone-100 font-semibold">
+        <p className="dark:text-stone-100 text-xl">
           Masz pytania? Zadzwoń lub napisz. Chętnie udzielimy odpowiedzi i omówimy szczegóły.
         </p>
       </div>

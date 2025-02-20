@@ -17,7 +17,7 @@ const Footer = () => {
         </a>
         <p>&copy;{new Date().getFullYear()}. Creatif Studio. Wszystkie prawa zastrzeżone.</p>
       </div>
-      <div className="flex lg:flex-col gap-2 text-left">
+      <div className="flex flex-col gap-2 lg:text-left">
         <p>
           <span className="text-[#3eb43e] font-bold">E:</span>
           <a href="mailto:kontakt.creatifstudio@gmail.com" target='_blank' className="ml-1 hover:text-[#3eb43e] transition-all ease-in-out duration-300">

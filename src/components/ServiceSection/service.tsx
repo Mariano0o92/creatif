@@ -16,7 +16,7 @@ export default function Service() {
 		<section id='uslugi' className='section text-gray-600 '>
 
 				<h2 className='text-4xl font-bold text-[#3eb43e] sm:text-6xl'>Czym się zajmujemy?</h2>
-				<p className=' mb-12 dark:text-stone-100'>Libero minima optio qui</p>
+				<p className=' mb-12 text-xl dark:text-stone-100'>Główne sektory działań</p>
 
 			<div className='mx-auto grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3'>
 				<div
@@ -26,9 +26,7 @@ export default function Service() {
 					<img src={Service1} alt='Website icon' />
 					<h3 className='my-3 text-3xl font-semibold'>Strony internetowe</h3>
 					<div className='space-y-1 leading-tight'>
-						<p>Similique quas ea veniam</p>
-						<p>Tempore quasi porro</p>
-						<p>Blanditiis aut mollitia ex</p>
+						<p>Tworzymy nowoczesne, responsywne strony internetowe, które nie tylko wyróżniają się estetyką, ale także są funkcjonalne i łatwe w obsłudze. Dzięki naszym rozwiązaniom Twoja strona stanie się skutecznym narzędziem marketingowym.</p>
 					</div>
 				</div>
 				<div
@@ -38,9 +36,7 @@ export default function Service() {
 					<img src={Service2} alt='Domain icon' />
 					<h3 className='my-3 text-3xl font-semibold'>Hosting & Domena</h3>
 					<div className='space-y-1 leading-tight'>
-						<p>Similique quas ea veniam</p>
-						<p>Tempore quasi porro</p>
-						<p>Blanditiis aut mollitia ex</p>
+						<p>Oferujemy kompleksowe usługi hostingu oraz rejestracji domen, zapewniając Ci niezawodność, szybkość ładowania strony oraz pełną ochronę danych. Dostosowujemy rozwiązania do indywidualnych potrzeb Twojego biznesu.</p>
 					</div>
 				</div>
 				<div
@@ -50,9 +46,7 @@ export default function Service() {
 					<img src={Service3} alt='SEO icon' />
 					<h3 className='my-3 text-3xl font-semibold'>Optymalizacja SEO</h3>
 					<div className='space-y-1 leading-tight'>
-						<p>Similique quas ea veniam</p>
-						<p>Tempore quasi porro</p>
-						<p>Blanditiis aut mollitia ex</p>
+						<p>Zwiększ widoczność swojej strony w wynikach wyszukiwania dzięki naszym usługom SEO. Skupiamy się na optymalizacji, która przyciąga ruch i poprawia pozycję w Google, co przekłada się na większą liczbę klientów.</p>
 					</div>
 				</div>
 				<div
@@ -62,9 +56,7 @@ export default function Service() {
 					<img src={Service4} alt='Website icon' />
 					<h3 className='my-3 text-3xl font-semibold'>Modernizacja stron</h3>
 					<div className='space-y-1 leading-tight'>
-						<p>Similique quas ea veniam</p>
-						<p>Tempore quasi porro</p>
-						<p>Blanditiis aut mollitia ex</p>
+						<p>Wykonujemy kompleksowe modernizacje stron internetowych, poprawiając ich funkcjonalność, wygląd oraz dostosowanie do nowych standardów technologicznych. Twoja strona będzie zawsze na czasie i gotowa na wyzwania przyszłości.</p>
 					</div>
 				</div>
 				<div
@@ -74,9 +66,7 @@ export default function Service() {
 					<img src={Service5} alt='Website icon' />
 					<h3 className='my-3 text-3xl font-semibold'>Wsparcie i utrzymanie strony</h3>
 					<div className='space-y-1 leading-tight'>
-						<p>Similique quas ea veniam</p>
-						<p>Tempore quasi porro</p>
-						<p>Blanditiis aut mollitia ex</p>
+						<p>Oferujemy pełne wsparcie techniczne oraz usługi utrzymania strony internetowej. Dzięki naszym usługom możesz mieć pewność, że Twoja strona działa sprawnie i jest zabezpieczona przed ewentualnymi awariami.</p>
 					</div>
 				</div>
 				<div
@@ -86,9 +76,7 @@ export default function Service() {
 					<img src={Service6} alt='Website icon' />
 					<h3 className='my-3 text-3xl font-semibold'>Strony wizytówki</h3>
 					<div className='space-y-1 leading-tight'>
-						<p>Similique quas ea veniam</p>
-						<p>Tempore quasi porro</p>
-						<p>Blanditiis aut mollitia ex</p>
+						<p>Proponujemy tworzenie profesjonalnych stron wizytówek, które będą doskonałą reprezentacją Twojej firmy w internecie. Zadbamy o to, aby Twoja strona była prosta, elegancka i efektywna w przyciąganiu potencjalnych klientów.</p>
 					</div>
 				</div>
 			</div>

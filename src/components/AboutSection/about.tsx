@@ -6,7 +6,7 @@ export default function About() {
 		<section id='onas' className='section relative text-gray-600 dark:text-stone-100'>
 			{/* Header Section */}
 			<h2 className='text-4xl font-bold text-[#3eb43e] sm:text-6xl'>O nas</h2>
-			<p className='mb-12'>
+			<p className='mb-12 text-xl'>
 				Naszym celem jest tworzenie innowacyjnych rozwiązań cyfrowych, które poprawiają doświadczenia użytkowników.
 			</p>
 			<div className='mx-auto grid grid-rows-[1fr_1fr] justify-center gap-4'>
