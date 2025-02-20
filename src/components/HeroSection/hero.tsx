@@ -34,7 +34,7 @@ export default function Hero() {
 			const sections = document.querySelectorAll('.section')
 			// eslint-disable-next-line prefer-const
 			for (let section of sections) {
-				if (section.getBoundingClientRect().top > 80) {
+				if (section.getBoundingClientRect().top > 90) {
 					section.scrollIntoView({ behavior: 'smooth' })
 					break
 				}

@@ -13,7 +13,7 @@ export default function About() {
 				{/* First Content Block */}
 				<div
 					data-aos='fade-right'
-					data-aos-offset='300'
+					data-aos-offset='200'
 					data-aos-easing='ease-in-sine'
 					data-aos-once='true'
 					className='grid justify-center grid-cols-1 md:grid-cols-2 bg-green-100 rounded-3xl shadow-md overflow-hidden'>
@@ -29,7 +29,7 @@ export default function About() {
 				{/* Second Content Block */}
 				<div
 					data-aos='fade-left'
-					data-aos-offset='300'
+					data-aos-offset='200'
 					data-aos-easing='ease-in-sine'
 					data-aos-once='true'
 					className='grid justify-center grid-cols-1 md:grid-cols-2 bg-green-100 rounded-3xl shadow-md overflow-hidden'>
