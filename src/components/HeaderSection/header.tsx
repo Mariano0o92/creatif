@@ -8,7 +8,6 @@ import Sun from '../../assets/sun.svg'
 const navigation = [
 	{ name: 'Home', href: '#' },
 	{ name: 'Usługi', href: '#uslugi' },
-	{ name: 'Portfolio', href: '#' },
 	{ name: 'O nas', href: '#onas' },
 	{ name: 'Kontakt', href: '#kontakt' },
 ]

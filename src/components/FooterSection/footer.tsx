@@ -20,21 +20,18 @@ const Footer = () => {
       <div className="flex lg:flex-col gap-2 text-left">
         <p>
           <span className="text-[#3eb43e] font-bold">E:</span>
-          <a href="mailto:kontakt@creatif.pl" className="ml-1 hover:text-[#3eb43e] transition-all ease-in-out duration-300">
-            kontakt@creatif.pl
+          <a href="mailto:kontakt.creatifstudio@gmail.com" target='_blank' className="ml-1 hover:text-[#3eb43e] transition-all ease-in-out duration-300">
+          kontakt.creatifstudio@gmail.com
           </a>
         </p>
         <p>
           <span className="text-[#3eb43e] font-bold">T:</span>
-          <a href="tel:+48792241724" className="ml-1 hover:text-[#3eb43e] transition-all ease-in-out duration-300">
+          <a href="tel:+48792241724" target='_blank' className="ml-1 hover:text-[#3eb43e] transition-all ease-in-out duration-300">
             +48 792 241 724
           </a>
         </p>
       </div>
       <div className="flex flex-col sm:flex-row items-center gap-3 text-[#3eb43e] font-bold">
-        <a href="#" className="hover:text-gray-600 dark:hover:text-stone-100 transition-all ease-in-out duration-300">
-          Obszary działania
-        </a>
         <a href="#" className="hover:text-gray-600 dark:hover:text-stone-100 transition-all ease-in-out duration-300">
           Polityka prywatności
         </a>

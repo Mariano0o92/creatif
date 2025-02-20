@@ -30,7 +30,7 @@ export default function Contact() {
               <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
             </svg>
             <h3 className="font-semibold text-xl">Zadzwoń</h3>
-            <span className="font-bold">+48 792 241 724</span>
+            <a href='tel:+48792241724' target='_blank' className="font-bold">+48 792 241 724</a>
           </div>
           <div className="flex flex-col items-center justify-items-center flex-1 gap-2 py-10 px-4 bg-green-100 rounded-3xl shadow-md hover:-translate-y-1 transform transition-all duration-300 ease-in-out hover:shadow-lg">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3eb43e" className="w-20 h-20">
@@ -38,7 +38,7 @@ export default function Contact() {
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
             </svg>
             <h3 className="font-semibold text-xl">Napisz maila</h3>
-            <span className="font-bold">creatif@business.com</span>
+            <a href='mailto:kontakt.creatifstudio@gmail.com' target='_blank' className="font-bold">kontakt.creatifstudio@gmail.com</a>
           </div>
         </div>
 

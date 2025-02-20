@@ -9,14 +9,14 @@ export default function About() {
 			<p className='mb-12'>
 				Naszym celem jest tworzenie innowacyjnych rozwiązań cyfrowych, które poprawiają doświadczenia użytkowników.
 			</p>
-			<div className='mx-auto grid grid-rows-[1fr_1fr] justify-center items-stretch gap-4'>
+			<div className='mx-auto grid grid-rows-[1fr_1fr] justify-center gap-4'>
 				{/* First Content Block */}
 				<div
 					data-aos='fade-right'
 					data-aos-offset='300'
 					data-aos-easing='ease-in-sine'
 					data-aos-once='true'
-					className='grid justify-center grid-cols-1 md:grid-cols-2 h-full bg-green-100 rounded-3xl shadow-md overflow-hidden'>
+					className='grid justify-center grid-cols-1 md:grid-cols-2 bg-green-100 rounded-3xl shadow-md overflow-hidden'>
 					<img src={Development} alt='About Us' className='object-cover w-full h-full' />
 					<div className='flex flex-col items-start justify-start text-gray-600 p-6'>
 						<h3 className='my-3 text-3xl font-semibold'>Nasza misja</h3>
@@ -32,7 +32,7 @@ export default function About() {
 					data-aos-offset='300'
 					data-aos-easing='ease-in-sine'
 					data-aos-once='true'
-					className='grid justify-center grid-cols-1 md:grid-cols-2 h-full bg-green-100 rounded-3xl shadow-md overflow-hidden'>
+					className='grid justify-center grid-cols-1 md:grid-cols-2 bg-green-100 rounded-3xl shadow-md overflow-hidden'>
 					<img src={Passion} alt='Our Mission' className='object-cover w-full h-full md:col-[2]' />
 					<div className='flex flex-col items-start justify-start text-gray-600 text-center p-6 md:col-[1] md:row-[1]'>
 						<h3 className='my-3 text-3xl font-semibold'>Nasze wartości</h3>
